@@ -59,6 +59,9 @@
     ignore = ignore.map(function (ignoredFile) {
       return '!' + ignoredFile;
     });
+    ignore = ignore.filter(function (ignoredFile) {
+      return !ignoredFile.match(/^chcp/);
+    });
 
     // console.log('Credentials: ', credentials);
     // console.log('Config: ', config);
