@@ -54,6 +54,7 @@
       process.exit(0);
     }
 
+    ignore = ignore.filter( ignoredFile => !ignoredFile.match(/^chcp/) )
     ignore = ignore.map( ignoredFile => `!${ignoredFile}` )
     ignore = ignore.filter( ignoredFile => !ignoredFile.match(/^chcp/) )
 
